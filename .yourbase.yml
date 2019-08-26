@@ -1,0 +1,14 @@
+dependencies:
+  build:
+    - python:3.6.3
+
+build_targets:
+  - name: default
+    commands:
+      - pip install -r requirements.txt
+      - python tests.py
+
+ci:
+  builds:
+    - name: default
+      build_target: default
